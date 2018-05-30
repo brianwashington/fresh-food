@@ -5,6 +5,8 @@
 
 /server
 
+/src/Properties.js
+
 # testing
 /coverage
 
