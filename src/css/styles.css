@@ -1,0 +1,248 @@
+@import url("https://fonts.googleapis.com/css?family=Dancing+Script|Fira+Sans");
+* {
+  box-sizing: border-box; }
+
+body {
+  margin: 0;
+  font-family: "Fira Sans"; }
+
+.wrapper {
+  max-width: 1400px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column; }
+
+.header {
+  position: fixed;
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+  padding: 25px 75px;
+  box-shadow: 0 1px 20px grey;
+  background: white;
+  height: 65px;
+  top: 0; }
+  .header .header-text {
+    background: #91c11e;
+    color: white;
+    padding: 15px;
+    transform: rotate(-10deg);
+    border-radius: 100px;
+    width: 85px;
+    text-align: center;
+    position: fixed;
+    top: 10px;
+    left: 100px; }
+    .header .header-text .hello-text {
+      font-family: "Dancing Script";
+      font-size: 1.5em; }
+  .header .log-in {
+    text-decoration: none;
+    color: #91c11e;
+    text-transform: uppercase;
+    position: fixed;
+    right: 75px;
+    padding: 15px; }
+
+.login-container {
+  width: 80%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  box-shadow: 0 0 10px darkgrey;
+  border-radius: 5px;
+  margin: 150px auto;
+  padding: 100px 0; }
+  .login-container h1,
+  .login-container h3 {
+    width: 100%;
+    text-align: center; }
+  .login-container .email,
+  .login-container .password,
+  .login-container .submit {
+    width: 60%;
+    padding: 15px;
+    box-shadow: 0px 0px 10px darkgray;
+    border: none; }
+  .login-container .submit {
+    background: #91c11e;
+    color: white;
+    text-transform: uppercase; }
+  .login-container .submit:hover {
+    cursor: pointer; }
+  .login-container .error {
+    height: 30px;
+    width: 300px;
+    padding: 5px;
+    color: rgba(255, 0, 0, 0.9);
+    visibility: hidden; }
+  .login-container .show {
+    visibility: visible; }
+
+.recipe-preview-wrapper {
+  max-width: 90%;
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 auto;
+  justify-content: center; }
+
+.recipe-preview {
+  width: 300px;
+  height: 300px;
+  box-shadow: 0 0 10px grey;
+  margin: 10px;
+  display: flex;
+  flex-direction: column;
+  text-decoration: none;
+  color: black; }
+  .recipe-preview .recipe-preview-title {
+    padding: 15px 5px 5px 2px;
+    height: 80px;
+    text-align: center; }
+    .recipe-preview .recipe-preview-title .rating {
+      display: block;
+      margin-top: 5px; }
+  .recipe-preview .recipe-preview-image {
+    max-width: 100%;
+    height: 220px; }
+
+.recipe-list-wrapper {
+  padding-top: 100px;
+  max-width: 90%;
+  margin: 0 auto; }
+  .recipe-list-wrapper ul {
+    list-style-type: none;
+    padding: 0; }
+  .recipe-list-wrapper .recipe {
+    display: flex;
+    flex-direction: column; }
+    .recipe-list-wrapper .recipe h1,
+    .recipe-list-wrapper .recipe h2 {
+      margin-bottom: 10px; }
+  .recipe-list-wrapper .recipe-image {
+    max-width: 100%;
+    max-height: 100%; }
+
+.recipe-title {
+  margin-bottom: 0;
+  padding-bottom: 0; }
+  .recipe-title h1,
+  .recipe-title h2 {
+    padding: 0;
+    margin: 0; }
+
+.recipe-info {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  padding: 0 5px 10px 0; }
+  .recipe-info h5 {
+    margin: 0px 50px 0px 0px; }
+
+.recipe-details {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  min-height: 400px;
+  width: 100%; }
+  .recipe-details .nutrition-facts {
+    align-self: flex-start;
+    width: 40%; }
+    .recipe-details .nutrition-facts ul li {
+      padding-bottom: 20px;
+      width: 100%; }
+  .recipe-details .ingredients {
+    padding: 20px 100px 20px 0;
+    width: 30%; }
+    .recipe-details .ingredients h3 {
+      padding-bottom: 10px;
+      margin: 0; }
+    .recipe-details .ingredients ul {
+      display: inline-flex;
+      flex-direction: column;
+      padding-left: 20px;
+      margin-top: 5px;
+      width: 100%;
+      min-height: 250px;
+      padding-left: 0; }
+    .recipe-details .ingredients ul li {
+      height: 75px;
+      width: 100%;
+      padding: 0;
+      margin: 0; }
+    .recipe-details .ingredients ul li:last-child {
+      height: 10px; }
+    .recipe-details .ingredients .ingredient-name {
+      display: inline-block;
+      width: 100%;
+      height: 100%;
+      margin: 0;
+      padding: 0; }
+    .recipe-details .ingredients .ingredient-image {
+      display: inline-block;
+      width: 100%;
+      height: 100%; }
+      .recipe-details .ingredients .ingredient-image img {
+        width: 50px;
+        height: 50px; }
+  .recipe-details .recipe-description {
+    flex: 4;
+    line-height: 25px; }
+
+/******** Media Queries *********/
+@media all and (max-width: 500px) {
+  .wrapper {
+    height: 100%;
+    padding: 10px; }
+  .header .header-text {
+    left: 20px; }
+  .header .log-in {
+    right: 20px; }
+  .login-container {
+    width: 100%;
+    height: 100%;
+    box-shadow: none;
+    margin: 0 auto; }
+    .login-container h1 {
+      padding: 0 7px; }
+    .login-container .email,
+    .login-container .password,
+    .login-container .submit,
+    .login-container .error {
+      width: 80%; }
+  .recipe-info {
+    flex-direction: column; }
+  .recipe-details {
+    justify-content: flex-start; }
+    .recipe-details .ingredients {
+      width: 50%; }
+    .recipe-details .nutrition-facts {
+      align-self: flex-start;
+      width: 100%; }
+      .recipe-details .nutrition-facts ul li {
+        width: 50%;
+        display: inline-block;
+        border: 1px solid black; } }
+
+@media all and (max-height: 450px) {
+  .wrapper {
+    height: 100vh; }
+  .login-container {
+    margin-top: 60px;
+    height: 100%;
+    width: 100%; }
+    .login-container .email,
+    .login-container .password,
+    .login-container .submit {
+      width: 80%; }
+    .login-container h1 {
+      margin-bottom: 0;
+      font-size: 1em; }
+    .login-container h3 {
+      font-size: 0.7em; } }
